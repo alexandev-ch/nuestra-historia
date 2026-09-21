@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Historia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- CONTROL DE MÚSICA (archivo de audio local, sin reproductor
+       visual: solo los botones personalizados) -->
+  <!-- ===================================================== -->
+  <div class="music-player" id="musicPlayer">
+    <audio id="backgroundMusic" preload="auto" loop>
+      <source src="audio/nuestra-cancion.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-panel__controls">
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">▶</span>
+      </button>
+      <button class="music-toggle music-toggle--mute" id="musicMuteToggle" type="button" aria-label="Silenciar música" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">🔊</span>
+      </button>
+    </div>
+    <p class="music-hint" id="musicHint" hidden>Pulsa ▶ para comenzar la música</p>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- 1. PORTADA -->
+  <!-- ===================================================== -->
+  <header class="hero" id="portada">
+    <div class="hero__media">
+      <img
+        class="hero__image"
+        src="assets/images/portada.jpg"
+        alt="Fotografía de portada de la pareja"
+      >
+      <div class="hero__overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__content reveal">
+      <p class="hero__date">03-03-2022</p>
+      <h1 class="hero__names">Alexander &amp; Hilary</h1>
+      <p class="hero__phrase">Te amo tres millones y en todos los universos</p>
+      <a href="#como-comenzo" id="startStoryBtn" class="btn btn--primary hero__cta">Comenzar nuestra historia ❤️</a>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ===================================================== -->
+    <!-- 2. CÓMO COMENZÓ TODO (reutiliza el patrón .story) -->
+    <!-- ===================================================== -->
+    <section class="section story" id="como-comenzo">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-01.jpg"
+            alt="Fotografía de cómo comenzó nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">15-06-2022</span>
+          <h2 class="story__title">Cómo comenzó todo</h2>
+          <p class="story__paragraph">
+            Te vi desde mi aula estabas en la cancha y por obras del destino fui a darte algo de otra persona y te vi de cerca y me enamore mas de ti todo empezo ahi me gusto tu risa, tu voz, tu mirada, todo de ti me encanto. Luego me fui por suerte a tu curso y no paso mucho tiempo para que me declare a ti con mi acordion y decirte que te amo y si querias ser mi novia ahi fue donde todo dio marcha aunque ya estuvimos por chat o distancia ahora te podia tener y compartimos cada momento juntos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 3. NUESTROS PRIMEROS MOMENTOS (tarjetas) -->
+    <!-- ===================================================== -->
+    <section class="section section--moments" id="primeros-momentos">
+      <div class="container">
+        <h2 class="section__title reveal">Nuestros primeros momentos</h2>
+
+        <div class="moments-grid">
+          <article class="moment-card reveal">
+            <div class="moment-card__media">
+              <img class="moment-card__image" src="assets/images/historia-01.jpg" alt="Primer recuerdo juntos">
+            </div>
+            <span class="moment-card__date">15-06-2022</span>
+            <h3 class="moment-card__title">Primer recuerdo</h3>
+            <p class="moment-card__text">Prime cumpleaños juntos con una pizza rica y un clima bueno te vi y estabas muy hermosa y lo sigues estando pero ese dia fue tambien nuestra primera vez en ya sabes y la verdad fue lindo todo el dia y gracioso.</p>
+          </article>
+
+          <article class="moment-card reveal">
+            <div class="moment-card__media">
+              <img class="moment-card__image" src="assets/images/historia-02.jpg" alt="Segundo recuerdo juntos">
+            </div>
+            <span class="moment-card__date">09-03-2023</span>
+            <h3 class="moment-card__title">Segundo recuerdo</h3>
+            <p class="moment-card__text">Primera vez que fuimos al cine al estreno de mario bros la pasamos muy bien jugamos los juegos que habia en el cinebol, nos tomamos fotos, comimos y me dormi e tu hombro en el auto al regreso a casa me acuerdo que nos grabaron y fue lindo un recuerdo eterno.</p>
+          </article>
+
+          <article class="moment-card reveal">
+            <div class="moment-card__media">
+              <img class="moment-card__image" src="assets/images/historia-03.jpg" alt="Tercer recuerdo juntos">
+            </div>
+            <span class="moment-card__date">2024-2025-2026</span>
+            <h3 class="moment-card__title">Tercer recuerdo</h3>
+            <p class="moment-card__text">Muchos recuerdos en uno cada uno en diferentes fechas y años, es como nuestra union a lo largo de los años lo que vivimos lo que nos formo nos conocimos mas con el paso del tiempo desde colegio, universidad, despues del trabajo siempre comiendo nuestro hobby pero nuestra felicidad de ambos aunque tuvimos problemas seguimos y son bellos recuerdos lindas cosas que vivimos juntos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 4. NUESTRA HISTORIA (línea de tiempo vertical) -->
+    <!-- ===================================================== -->
+    <section class="section section--timeline" id="nuestra-historia">
+      <div class="container container--narrow">
+        <h2 class="section__title reveal">Nuestra historia</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">03-03-2022</span>
+            <h3 class="timeline__title">Comienzo</h3>
+            <p class="timeline__text">Me atrevi a declararme de manera linda y con ese acordion que decia "Quieres ser mi novia" aceptaste ahi fue donde todo empezo ccon dificultadas pero siempre avanzabamos juntos te di tu primer regalo una cajota lleno de dulces y lo haria miles de veces mas.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">03-03-2022</span>
+            <h3 class="timeline__title">Primeros momentos</h3>
+            <p class="timeline__text">Nuestro primer beso bien torpe de mi parte despuesdel si, luego nuestra primera cita comiendo, nuestra primera vez de ambos que no salio tan bien pero era gracioso, cuando fuimos a ver una pelicula de mario bros, cuando te lo cocine, cuando me invitaste tu comida en ese viaje y fuimos juntos al colegio ese dia juntos, nuestras canciones, nuestras noches de karaoke, chiste, nuestra primera pelea, cuando te pedi que seas mi esposha hermosha y aceptastecon mi anillo de papel, cuando te di el primer collar de media luna de mi y tu luna entera, nuestros anillos dorados de matrimonio xd.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">03-04-2022</span>
+            <h3 class="timeline__title">Primer aniversario</h3>
+            <p class="timeline__text">La verdad no me acuerdo muy bien pero si nuestros aniversarios que celebramos y los cumpleaños lo que me diste tan rico y tan lindos los juguetes, pero me acuerdo que nos celebramos y fuimos a comer ya que no tenia mucho dinero.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">2022-2026</span>
+            <h3 class="timeline__title">Momentos importantes</h3>
+            <p class="timeline__text">Son muchos la verdad un monton en cada uno eramos los dos, juegos, comida, noches acostados, nos comunicamos mejor, fuimos por primera vez a un karaoke y la pasamos bien nos quedamos sin voz y nos divertimos mucho, el dia del peaton que te lleve a comer pollito en mi pension y fuimos caminando a tu casa hablando cantando, tu primer beso que me diste dios vole y vi a dios, y mas cosas que si contara no me alcanzaria la pagina.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">2022-2026</span>
+            <h3 class="timeline__title">Nuevas experiencias</h3>
+            <p class="timeline__text">Me subi a un juego de altura y casi me orino del miedo xd, la comunicacion aunque hablamos el mismo idioma para ella es distinto para mi igual y tuvimos que aprender a entendernos, saltar en el multicine en el juego, atreverme a hacer mas cosas por alguien mas sin pedir nada a cambio, cambiar mi perspectiva, ella me ayudo y yo le ayude a mejorar siempre nos apoyamos.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__date">21-09-2026</span>
+            <h3 class="timeline__title">Actualidad</h3>
+            <p class="timeline__text">Todo paso super rapido, ya casi 20 años y estabamos cuando tu tenias 14 y yo 15 y ya casi tengo 20 y tu cumpliste 19 no me arrepiento donde estamos ahora se que te amo mas de que imagine y de lo que prodria imaginar y este sentimiento crecera mas paso mucho tiempo y siempre tratamos de mejorar para ambos y nos comprendemos mas que antes y no me arrepiento de nada te amo y lo hare siempre.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 5. MOMENTOS ESPECIALES (galería con lightbox) -->
+    <!-- ===================================================== -->
+    <section class="section section--gallery" id="momentos-especiales">
+      <div class="container">
+        <h2 class="section__title reveal">Momentos especiales</h2>
+
+        <div class="gallery">
+          <button class="gallery__item reveal" type="button" data-full="assets/images/portada.jpg">
+            <img class="gallery__thumb" src="assets/images/portada.jpg" alt="Fotografía de portada">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/historia-01.jpg">
+            <img class="gallery__thumb" src="assets/images/historia-01.jpg" alt="Fotografía del primer momento">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/historia-02.jpg">
+            <img class="gallery__thumb" src="assets/images/historia-02.jpg" alt="Fotografía del segundo momento">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/historia-03.jpg">
+            <img class="gallery__thumb" src="assets/images/historia-03.jpg" alt="Fotografía del tercer momento">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/historia-04.jpg">
+            <img class="gallery__thumb" src="assets/images/historia-04.jpg" alt="Fotografía del cuarto momento">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/historia-05.jpg">
+            <img class="gallery__thumb" src="assets/images/historia-05.jpg" alt="Fotografía del quinto momento">
+          </button>
+          <button class="gallery__item reveal" type="button" data-full="assets/images/final.jpg">
+            <img class="gallery__thumb" src="assets/images/final.jpg" alt="Fotografía final">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 6. RECUERDOS — encabezado + los 5 bloques alternados -->
+    <!-- ===================================================== -->
+    <section class="section section--recuerdos">
+      <div class="container reveal">
+        <h2 class="section__title">Recuerdos</h2>
+      </div>
+    </section>
+
+    <!-- Recuerdo 01 — Foto izquierda / Texto derecha -->
+    <section class="section story" id="historia-01">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-01.jpg"
+            alt="Fotografía del primer momento de nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">Capítulo uno</span>
+          <h3 class="story__title">Donde todo empezo</h3>
+          <p class="story__paragraph">
+            Primera cita donde te hice caer, comimos, llegamos tarde a casa pero mas que felices, primera vez que compro comida para alguien, tu combinacion de ropa mas que perfecta y con tu cuerpo y rostro dios eres un angel una diosa de la belleza aqui dimos un paso adelante nos atrevimos a mas y seguimos asi y me encanta mucho.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recuerdo 02 — Texto izquierda / Foto derecha -->
+    <section class="section story story--reverse" id="historia-02">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-02.jpg"
+            alt="Fotografía del segundo momento de nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">Capítulo dos</span>
+          <h3 class="story__title">Primera vez en el cine "estreno"</h3>
+          <p class="story__paragraph">
+            Nos vimos en la 16 o ballivian creo, luego bajamos y en lo que yo debia llevarte tu me llevaste y llegamos al lugar compramos las entradas y las pipocas y gaseosas, nos gusto la pelicula tomamos fotitos y casi hago perder mi telefono xd, luego fuimos a casa. Pero todo el dia pero todo el dia estabas muy hemrosa tu estilo peinado tu estas perfecta en ese tiempo y ahora mismo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recuerdo 03 — Foto izquierda / Texto derecha -->
+    <section class="section story" id="historia-03">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-03.jpg"
+            alt="Fotografía del tercer momento de nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">Capítulo tres</span>
+          <h3 class="story__title">Conjunto de recuerdos</h3>
+          <p class="story__paragraph">
+            Mi cumpleaños, temporada de colegio, baile, universidad, trabajo y dias pesados siempre estuvimos juntos y ayudandonos que el dia no se tan pesado para ambos disfrutanto un buen tiempo juntos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recuerdo 04 — Texto izquierda / Foto derecha -->
+    <section class="section story story--reverse" id="historia-04">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-04.jpg"
+            alt="Fotografía del cuarto momento de nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">Capítulo cuatro</span>
+          <h3 class="story__title">Primer evento de la universidad</h3>
+          <p class="story__paragraph">
+            Fuimos a ver lo de guerra de robots, comida japonesa, despues un helado de canela me invitaste y la pasamos bien y me diste tu comida porque no te gustaba y fuimos a casa te acompañe hasta la ballivian y te deje en la movilidad.</del>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recuerdo 05 — Foto izquierda / Texto derecha -->
+    <section class="section story" id="historia-05">
+      <div class="container story__grid">
+        <div class="story__media reveal">
+          <img
+            class="story__image"
+            src="assets/images/historia-05.jpg"
+            alt="Fotografía del quinto momento de nuestra historia"
+          >
+        </div>
+        <div class="story__text reveal">
+          <span class="story__label">Capítulo cinco</span>
+          <h3 class="story__title">Pollos copacabana- Plaza avaroa</h3>
+          <p class="story__paragraph">
+            Despues de mi universidad la pasamos juntos, comimos, fuimos al hipermaxia comprar cosas que tu invitaste y me senti una princesa jajja te amo cariño, fuimos al alto te deje tomar auto y baje.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 7. HASTA HOY -->
+    <!-- ===================================================== -->
+    <section class="section section--present" id="hasta-hoy">
+      <div class="container container--narrow reveal">
+        <h2 class="section__title">Hasta hoy</h2>
+        <p class="section__text">
+          Hasta hoy avanzamos mucho en nosotros y no quiero perdernos nunca eres el amor de mi vida, te vi crecer y tu ami 
+          vimos todo lo que somos y aun asi nos quedamos no se hasta donde llegaremos pero quiero que llegemos hasta viejitos hasta que duelan los hueso
+          yo te quiero decir que estoy orgulloso de ti, lo mucho que cambiaste y mejoraste en lo personal eres increible.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 8. MENSAJE FINAL -->
+    <!-- ===================================================== -->
+    <section class="section section--final" id="final">
+      <div class="section--final__media">
+        <img
+          class="section--final__image"
+          src="assets/images/final.jpg"
+          alt="Fotografía final que cierra nuestra historia"
+        >
+      </div>
+      <div class="container container--narrow reveal">
+        <p class="section--final__message">
+          TE AMO 
+          Mas de lo que te imaginas y usted mi señorita mia es super bella hermosa perfecta tanto fisicamente y mentalmente, tambien emocionalmente, eres increible sigue mejorando y yo siempre estare para ti ayudarte cuidarte y amarte.
+        </p>
+        <a href="#portada" class="btn btn--outline">Volver al comienzo ❤️</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con ♡</p>
+  </footer>
+
+  <!-- ===================================================== -->
+  <!-- LIGHTBOX de la galería (oculto hasta que se abre una foto) -->
+  <!-- ===================================================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Cerrar">✕</button>
+    <img class="lightbox__image" id="lightboxImage" src="" alt="">
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- MÚSICA DE FONDO — archivo de audio local (audio/nuestra-cancion.mp3)
+       reproducido con el elemento <audio> nativo (ver arriba, en
+       .music-player). Ya no depende de YouTube. -->
+  <!-- ===================================================== -->
+  <script src="js/script.js"></script>
+</body>
+</html>
